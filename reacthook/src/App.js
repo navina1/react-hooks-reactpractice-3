@@ -5,6 +5,7 @@ import ComponentA from './components/ComponentA';
 import { createContext } from 'react';
 import BorderComponent from './components/HigherOrderComponent/BorderComponent';
 import Counter from './components/HigherOrderComponent/Counter';
+import Parent from './components/useCallbackAndMemo/Parent';
 
 
 export const nameContext=createContext();
@@ -24,7 +25,7 @@ function App() {
       {/* //for useEffect */}
       {/* <Post/> */}
 
-      <BorderComponent props={"static"}>
+      {/* <BorderComponent props={"static"}>
          <h1>Passing Html component also</h1>
       </BorderComponent>
       <BorderComponent props={"red"} color="red">
@@ -33,9 +34,11 @@ function App() {
 
 
       {/* here borderComponent is higher order component which take counter component */}
-      <BorderComponent>
+      {/* <BorderComponent>
         <Counter/>
-      </BorderComponent>
+      </BorderComponent>  */}
+
+      <Parent/>
     </div>
   );
 }
